@@ -144,7 +144,7 @@ $.jgrid.regional["en"] = {
 			parseRe : /[#%\\\/:_;.,\t\s-]/,
 			masks : {
 				// see http://php.net/manual/en/function.date.php for PHP format used in jqGrid
-				// and see httpdocs.jquery.com/UI/Datepicker/formatDate
+				// and see http://docs.jquery.com/UI/Datepicker/formatDate
 				// and https://github.com/jquery/globalize#dates for alternative formats used frequently
 				// one can find on https://github.com/jquery/globalize/tree/master/lib/cultures many
 				// information about date, time, numbers and currency formats used in different countries

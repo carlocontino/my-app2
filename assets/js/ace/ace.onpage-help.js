@@ -45,10 +45,10 @@ jQuery(function($) {
 			//for example convert `basics/navbar.layout` to `basics/navbar.html`
 			url = url + '.html';
 		}
-		return this.settings.base +docs/sections/' + url;
+		return this.settings.base + '/docs/sections/' + url;
 	}
 	var get_img_url = function(src) {
-		return this.settings.base +docs/' +src;
+		return this.settings.base + '/docs/' +src;
 	}
 
 	/**

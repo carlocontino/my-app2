@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>Dashboard - Ace Admin</title>
+
+		<meta name="description" content="overview &amp; stats" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="assets/css/bootstrap.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<!-- page specific plugin styles -->
+
+		<!-- text fonts -->
+		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="assets/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
+<link rel="stylesheet" href="assets/css/select2.css" />
+<link rel="stylesheet" href="assets/css/bootstrap-datepicker3.css" />
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="assets/css/ace-part2.css" class="ace-main-stylesheet" />
+		<![endif]-->
+
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+		<script src="assets/js/ace-extra.js"></script>
+
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+		<!--[if lte IE 8]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.js"></script>
+		<![endif]-->
+	</head>
+	<style>
+	input.default{
+		 width: 50px !important;
+	}
+	</style>
+
+	<body class="no-skin">
+		<!-- #section:basics/navbar.layout -->
+		<div id="navbar" class="navbar navbar-default">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+				<!-- #section:basics/sidebar.mobile.toggle -->
+				<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+					<span class="sr-only">Toggle sidebar</span>
+
+					<span class="icon-bar"></span>
+
+					<span class="icon-bar"></span>
+
+					<span class="icon-bar"></span>
+				</button>
+
+				<!-- /section:basics/sidebar.mobile.toggle -->
+				<div class="navbar-header pull-left">
+					<!-- #section:basics/navbar.layout.brand -->
+					<a href="#" class="navbar-brand">
+						<img src="images/logo_mobile_concorde.jpg"/>
+						Portale agenti
+					</a>
+
+					<!-- /section:basics/navbar.layout.brand -->
+
+					<!-- #section:basics/navbar.toggle -->
+
+					<!-- /section:basics/navbar.toggle -->
+				</div>
+
+				<!-- #section:basics/navbar.dropdown -->
+				<div class="navbar-buttons navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						
+
+						<li class="purple">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="ace-icon fa fa-bell icon-animated-bell"></i>
+								<span class="badge badge-important">4</span>
+							</a>
+
+							<ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="ace-icon fa fa-exclamation-triangle"></i>
+									4 notifiche
+								</li>
+
+								<li class="dropdown-content">
+									<ul class="dropdown-menu dropdown-navbar navbar-pink">
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-pink fa fa-shopping-basket"></i>
+														<span class="badge badge-info">2</span> Ordini approvati
+													</span>
+													
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<i class="btn btn-xs btn-primary fa fa-file-pdf-o"></i>
+												<span class="badge badge-info">1</span> Fattura emessa
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-success fa fa-user"></i>
+														<span class="badge badge-info">1</span> Nuovo cliente
+													</span>
+												</div>
+											</a>
+										</li>
+
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<span class="fa-stack fa-lg">
+								  <i class="fa fa-circle fa-stack-2x"></i>
+								  <i class="fa fa-user fa-stack-1x " style="color: #579ec8;"></i>
+								</span>
+								<span class="user-info">
+									Utente direzionale
+								</span>
+
+								<i class="ace-icon fa fa-caret-down"></i>
+							</a>
+
+							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="#">
+										<img src="images/thumb1.jpg"> ASUS ZENPHONE
+									</a>
+								</li>
+
+								<li>
+									<a href="profile.html">
+										<img src="images/thumb2.jpg"> LG G4
+									</a>
+								</li>
+															
+							</ul>
+						</li>
+
+						<!-- /section:basics/navbar.user_menu -->
+					</ul>
+				</div>
+
+				<!-- /section:basics/navbar.dropdown -->
+			</div><!-- /.navbar-container -->
+		</div>
+
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<!-- #section:basics/sidebar -->
+			<div id="sidebar" class="sidebar                  responsive">
+				<script type="text/javascript">
+					try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+				</script>
+
+				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+					<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+						<button class="btn btn-success">
+							<i class="ace-icon fa fa-list"></i>
+						</button>
+
+						<!-- /section:basics/sidebar.layout.shortcuts -->
+					</div>
+
+					<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+						<span class="btn btn-success"></span>
+					</div>
+				</div><!-- /.sidebar-shortcuts -->
+
+				<ul class="nav nav-list">
+					<li>
+						<a href="index.html">
+							<i class="menu-icon fa fa-tachometer"></i>
+							<span class="menu-text"> Dashboard </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+					
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-list"></i>
+							<span class="menu-text"> Ordini </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="lista-ordini.html"> 									<i class="menu-icon fa fa-caret-right"></i> 									<span class="menu-text"> 										In approvazione 										<span class="badge badge-transparent"> 											<i class="ace-icon fa fa-gavel red bigger-130"></i> 										</span> 									</span> 								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="lista-ordini.html"> 									<i class="menu-icon fa fa-caret-right"></i> 									<span class="menu-text"> 										In lavorazione 										<span class="badge badge-transparent"> 											<i class="ace-icon fa fa-cog orange bigger-130"></i> 										</span> 									</span> 								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="lista-ordini.html"> 									<i class="menu-icon fa fa-caret-right"></i> 									<span class="menu-text"> 										In spedizione 										<span class="badge badge-transparent"> 											<i class="ace-icon fa fa-truck blue bigger-130"></i> 										</span> 									</span> 								</a>
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="lista-ordini.html"> 									<i class="menu-icon fa fa-caret-right"></i> 									<span class="menu-text"> 										Evasi 										<span class="badge badge-transparent"> 											<i class="ace-icon fa fa-check green bigger-130"></i> 										</span> 									</span> 								</a>
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="lsita-ordini.html"> 									<i class="menu-icon fa fa-caret-right"></i> 									<span class="menu-text"> 										In pausa 										<span class="badge badge-transparent"> 											<i class="ace-icon fa fa-pause purple bigger-130"></i> 										</span> 									</span> 								</a>
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>
+					
+					<li class="">
+						<a href="lista_clienti.html"> 							<i class="menu-icon fa fa-users"></i> 							<span class="menu-text"> Lista clienti </span> 						</a>
+
+					    <b class="arrow fa fa-angle-down"></b>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="index.html">
+									<i class="menu-icon fa fa-user"></i>
+									<span class="menu-text"> Elettronica s.r.l </span>
+								</a>
+		
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>
+				</ul><!-- /.nav-list -->
+
+				<!-- #section:basics/sidebar.layout.minimize -->
+				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+					<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+				</div>
+
+				<!-- /section:basics/sidebar.layout.minimize -->
+				<script type="text/javascript">
+					try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+				</script>
+			</div>
+
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				<div class="main-content-inner">
+					<!-- #section:basics/content.breadcrumbs -->
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="ace-icon fa fa-home home-icon"></i>
+								<a href="#">Home</a>
+							</li>
+							<li><i class="fa fa-shopping-cart"></i> Carrello</li>
+							<li class="active"><i class="fa fa-shopping-cart"></i> Ordine</li>
+						</ul><!-- /.breadcrumb -->
+
+						<!-- #section:basics/content.searchbox -->
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="ace-icon fa fa-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- /.nav-search -->
+
+						<!-- /section:basics/content.searchbox -->
+					</div>
+
+					<!-- /section:basics/content.breadcrumbs -->
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								<i class="fa fa-list"></i> Ordine
+							</h1>	
+						</div>
+						<button class="btn btn-info"><i class="fa fa-arrow-left ace-icon"></i> Torna alla lista degli ordini</button>
+						<button class="btn btn-success"><i class="fa fa-check ace-icon"></i> Approva l'ordine</button>
+						<button class="btn btn-warning"><i class="fa fa-remove ace-icon"></i> Rifiuta l'ordine</button>
+						<div class="user-profile row" id="user-profile-1">
+							<div class="col-xs-12 col-sm-4 center">
+								<h3>
+							<i class="fa fa-user"></i> Elettronica s.r.l.
+						</h3>
+						
+								<div>
+									<div class="space-4"></div>
+										<div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
+											<div class="inline position-relative">
+												<a data-toggle="dropdown" class="user-title-label dropdown-toggle" href="#">
+													<i class="ace-icon fa fa-circle light-green"></i>
+													&nbsp;
+													<span class="white">Mario Rossi</span>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="space-6"></div>
+									<div class="profile-user-info profile-user-info-striped">
+										<div class="profile-info-row">
+											<div class="profile-info-name"> Ragione Sociale </div>
+											<div class="profile-info-value">
+												<span id="username" class="editable editable-click">Elettronica s.r.l.</span>
+											</div>
+										</div>
+
+										<div class="profile-info-row">
+											<div class="profile-info-name"> Indirizzo</div>
+											<div class="profile-info-value">
+												<span id="username" class="editable editable-click">Via ...</span>
+											</div>
+										</div>
+
+										<div class="profile-info-row">
+											<div class="profile-info-name"> Citt&agrave; </div>
+												<div class="profile-info-value">
+												<i class="fa fa-map-marker light-orange bigger-110"></i>
+												<span id="city" class="editable editable-click">Modena</span>
+											</div>
+										</div>
+
+										<div class="profile-info-row">
+											<div class="profile-info-name"> Ordine </div>
+											<div class="profile-info-value">
+												<span id="age" class="editable editable-click">KASL-091284945</span>
+											</div>
+										</div>
+										
+										<div class="profile-info-row">
+											<div class="profile-info-name"> Metodo di pagamento </div>
+											<div class="profile-info-value">
+												<span id="age" class="editable editable-click">Rimessa diretta</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="hr hr16 dotted"></div>
+								</div>
+
+								<div class="col-xs-12 col-sm-8">
+									<form class="form-horizontal" role="form">
+										<h2>Dati generali</h2>	
+										
+										<div class="form-group">
+											<label class="col-sm-3 control-label no-padding-right" for="form-field-1">
+											Data consegna
+											</label>
+											<div class="col-sm-4">
+												<div class="input-group">
+													<i class="fa fa-calendar bigger-110"></i> 12/02/2016
+												</div>
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-sm-3 control-label no-padding-right" for="form-field-1">
+											Ordine anticipato
+											</label>
+											<div class="checkbox">
+												&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check"></i>&nbsp;
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-sm-3 control-label no-padding-right" for="form-field-1">
+											Numero ordine cliente
+											</label>
+											<div class="col-sm-9">
+												<strong>CASJ-1012828</strong>
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-sm-3 control-label no-padding-right" for="form-field-1">
+											Data ordine cliente
+											</label>
+											<div class="col-sm-4">
+												<div class="input-group">
+													<i class="fa fa-calendar bigger-110"></i> 10/02/2016
+												</div>
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-sm-3 control-label no-padding-right" for="form-field-1">
+											Blocco agente
+											</label>
+											<div class="checkbox">
+												&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check"></i>&nbsp;
+											</div>
+										</div>
+										<h2>Sconti generali di testata</h2>
+										
+										<div class="form-group">
+											<label class="col-sm-3 control-label no-padding-right" for="form-field-1">
+											Sconto Disc.
+											</label>
+											<div class="col-sm-9">
+												10%
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-sm-3 control-label no-padding-right" for="form-field-1">
+											Causale Sconto Disc.
+											</label>
+											<div class="col-sm-9">
+												<strong>Promozione....</strong>
+											</div>
+										</div>
+										
+									</form>
+								</div>
+							</div>	
+					<div>
+						<h2>Categorie</h2>
+						<hr>
+						<div id="dynamic-table_wrapper" class="dataTables_wrapper form-inline no-footer">
+							<table class="table table-striped table-bordered table-hover dataTable no-footer" id="dynamic-table" role="grid" aria-describedby="dynamic-table_info">
+									<thead>
+										<tr role="row">
+											<th rowspan="2" class="center" rowspan="1" colspan="1" aria-label="">
+												Categoria
+											</th>
+											<th rowspan="2" class="" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="">
+												Termine di pagamento
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr role="row" class="odd">
+												<td class="right">Sony</td>
+												<td class="right">
+													
+												</td>
+											</tr>
+											
+											<tr role="row" class="even">
+												<td class="right">Alcatel</td>
+												<td class="right">
+													
+												</td>
+											</tr>
+									</tbody>
+								</table>
+								
+							</div>
+						<hr>
+						<h2>Prodotti</h2>
+						<hr>
+						<div id="dynamic-table_wrapper" class="dataTables_wrapper form-inline no-footer">
+							<table class="table table-striped table-bordered table-hover dataTable no-footer" id="dynamic-table" role="grid" aria-describedby="dynamic-table_info">
+									<thead>
+										<tr role="row">
+											<th rowspan="2" class="center" rowspan="1" colspan="1" aria-label="">
+												Codice
+											</th>
+											<th rowspan="2" class="" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="">
+												Variante
+											</th>
+											<th rowspan="2" class="" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending">
+												Quantit&agrave;
+											</th>
+											<th rowspan="2" class="hidden-480" tabindex="0" aria-controls="" rowspan="1" colspan="1" aria-label="Clicks: activate to sort column ascending">
+												Sconto
+											</th>
+											<th rowspan="2" class="hidden-480" tabindex="0" aria-controls="" rowspan="1" colspan="1" aria-label="Clicks: activate to sort column ascending">
+												Tipo Sconto
+											</th>
+											<th rowspan="2" class="hidden-480" tabindex="0" aria-controls="" rowspan="1" colspan="1" aria-label="Clicks: activate to sort column ascending">
+												Causale Sconto
+											</th>
+											<th colspan="3" class="center hidden-480" style="background-color:#DD5A43;color:#fff" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Clicks: activate to sort column ascending">
+												Direzionale
+											</th>
+										</tr>
+										<tr>
+											<th class="hidden-480" tabindex="0" style="background-color:#DD5A43;color:#fff" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Clicks: activate to sort column ascending">
+												Sconto
+											</th>
+											<th class="hidden-480" style="background-color:#DD5A43;color:#fff" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Clicks: activate to sort column ascending">
+												Tipo Sconto
+											</th>
+											<th class="hidden-480" style="background-color:#DD5A43;color:#fff" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Clicks: activate to sort column ascending">
+												Causale Sconto
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr role="row" class="odd">
+												<td class="right">COD0123</td>
+												<td class="right"></td>
+												<td class="right">40</td>
+												<td class="right"></td>
+												<td class="right"></td>
+												<td class="right"></td>
+												<td class="right"></td>
+												<td class="right"></td>
+												<td class="right"></td>
+											</tr>
+											
+											<tr role="row" class="even">
+												<td class="right">ALC4919</td>
+												<td class="right"></td>
+												<td class="right">30</td>
+												<td class="right">15</td>
+												<td class="right">Percentuale</td>
+												<td class="right">Promozione ...</td>
+												<td class="right"></td>
+												<td class="right"></td>
+												<td class="right"></td>
+											</tr>
+											
+											<tr role="row" class="odd">
+												<td class="right">SNN94887817</td>
+												<td class="right"></td>
+												<td class="right">16</td>
+												<td class="right"></td>
+												<td class="right"></td>
+												<td class="right"></td>
+												<td class="right">10</td>
+												<td class="right">Percentaule</td>
+												<td class="right">Promozione Alcatel</td>
+											</tr>
+									</tbody>
+								</table>
+								
+							</div>
+						</div>
+					</div><!-- /.row -->
+				</div><!-- /.page-content -->
+			</div>
+			<div class="footer">
+				<div class="footer-inner">
+					<!-- #section:basics/footer -->
+					<div class="footer-content">
+						<span class="bigger-120">
+CONCORDE SPA National Mobile Phones Distributor - Via Orefici, 156 - Blocco 27 - Centergross - 40050 Funo di Argelato (Bo) Italy
+P. iva: 01626981201 - Telephone: ++39 051 8900211 r.a. - Fax: ++39 051 864677 
+						</span>
+
+						&nbsp; &nbsp;
+						<span class="action-buttons">
+							<a href="#">
+								<i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+							</a>
+
+							<a href="#">
+								<i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+							</a>
+
+							<a href="#">
+								<i class="ace-icon fa fa-rss-square orange bigger-150"></i>
+							</a>
+						</span>
+					</div>
+				<div class="space-4"></div>
+					<!-- /section:basics/footer -->
+				</div>
+			</div>
+			
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery1x.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.js"></script>
+		<![endif]-->
+		<script src="assets/js/jquery-ui.custom.js"></script>
+	<script src="assets/js/jquery.ui.touch-punch.js"></script>
+	<script src="assets/js/jquery.easypiechart.js"></script>
+	<script src="assets/js/jquery.sparkline.js"></script>
+	<script src="assets/js/flot/jquery.flot.js"></script>
+	<script src="assets/js/flot/jquery.flot.pie.js"></script>
+	<script src="assets/js/flot/jquery.flot.resize.js"></script>
+	<script src="assets/js/select2.js"></script>
+	<script src="assets/js/fuelux/fuelux.spinner.js"></script>
+	<!-- ace scripts -->
+	<script src="assets/js/ace/elements.scroller.js"></script>
+	<script src="assets/js/ace/elements.colorpicker.js"></script>
+	<script src="assets/js/ace/elements.fileinput.js"></script>
+	<script src="assets/js/ace/elements.typeahead.js"></script>
+	<script src="assets/js/ace/elements.wysiwyg.js"></script>
+	<script src="assets/js/ace/elements.spinner.js"></script>
+	<script src="assets/js/ace/elements.treeview.js"></script>
+	<script src="assets/js/ace/elements.wizard.js"></script>
+	<script src="assets/js/ace/elements.aside.js"></script>
+	<script src="assets/js/ace/ace.js"></script>
+	<script src="assets/js/ace/ace.ajax-content.js"></script>
+	<script src="assets/js/ace/ace.touch-drag.js"></script>
+	<script src="assets/js/ace/ace.sidebar.js"></script>
+	<script src="assets/js/ace/ace.sidebar-scroll-1.js"></script>
+	<script src="assets/js/ace/ace.submenu-hover.js"></script>
+	<script src="assets/js/ace/ace.widget-box.js"></script>
+	<script src="assets/js/ace/ace.settings.js"></script>
+	<script src="assets/js/ace/ace.settings-rtl.js"></script>
+	<script src="assets/js/ace/ace.settings-skin.js"></script>
+	<script src="assets/js/ace/ace.widget-on-reload.js"></script>
+	<script src="assets/js/ace/ace.searchbox-autocomplete.js"></script>
+<script src="assets/js/date-time/bootstrap-datepicker.js"></script>
+	
+	
+
+		<!-- inline scripts related to this page -->
+		<script>
+		
+		$('.date-picker').datepicker({
+			autoclose: true,
+			todayHighlight: true
+		})
+		
+		$('.select2').css('width', '150px').select2({
+			allowClear : true
+		});
+		$('.spinner1').ace_spinner({
+			value : 0,
+			min : 0,
+			max : 200,
+			step : 10,
+			btn_up_class : 'btn-info',
+			btn_down_class : 'btn-info'
+		}).closest('.ace-spinner').on('changed.fu.spinbox', function() {
+			//console.log($('#spinner1').val())
+		});
+	</script>
+
+		<!-- the following scripts are used in demo only for onpage help and you don't need them -->
+		<link rel="stylesheet" href="assets/css/ace.onpage-help.css" />
+
+		<script type="text/javascript"> ace.vars['base'] = '..'; </script>
+		<script src="assets/js/ace/elements.onpage-help.js"></script>
+		<script src="assets/js/ace/ace.onpage-help.js"></script>
+	</body>
+</html>

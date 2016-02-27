@@ -3397,7 +3397,7 @@ Following types are supported:
 Learn more about html5 inputs:  
 http://www.w3.org/wiki/HTML5_form_additions  
 To check browser compatibility please see:  
-https://developer.mozilla.org/en-docs/HTML/Element/Input
+https://developer.mozilla.org/en-US/docs/HTML/Element/Input
             
 @class html5types 
 @extends text
@@ -4584,7 +4584,7 @@ $(function(){
         inputclass: null,
         /**
         Format used for sending value to server. Also applied when converting date from <code>data-value</code> attribute.<br>
-        See list of tokens in [momentjs docs](http://momentjs.cdocs/#/parsing/string-format)
+        See list of tokens in [momentjs docs](http://momentjs.com/docs/#/parsing/string-format)  
         
         @property format 
         @type string

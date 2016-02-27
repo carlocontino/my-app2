@@ -158,7 +158,7 @@ $.jgrid.regional["de"] = {
 			parseRe : /[#%\\\/:_;.,\t\s-]/,
 			masks : {
 				// see http://php.net/manual/en/function.date.php for PHP format used in jqGrid
-				// and see httpdocs.jquery.com/UI/Datepicker/formatDate
+				// and see http://docs.jquery.com/UI/Datepicker/formatDate
 				// and https://github.com/jquery/globalize#dates for alternative formats used frequently
 				ISO8601Long: "Y-m-d H:i:s",
 				ISO8601Short: "Y-m-d",

@@ -11,6 +11,7 @@
 		<!-- bootstrap & fontawesome -->
 		<link rel="stylesheet" href="assets/css/bootstrap.css" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/select2.css" />
 
 		<!-- page specific plugin styles -->
 
@@ -245,7 +246,7 @@
 				</div><!-- /.sidebar-shortcuts -->
 
 				<ul class="nav nav-list">
-					<li class="active">
+					<li>
 						<a href="index.html">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> Dashboard </span>
@@ -348,10 +349,23 @@
 						</ul>
 					</li>
 					
-					<li class="">
+					<li class="active open">
 						<a href="lista_clienti.html"> 							<i class="menu-icon fa fa-users"></i> 							<span class="menu-text"> Lista clienti </span> 						</a>
 
+					    <b class="arrow fa fa-angle-down"></b>
+
 						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="active">
+								<a href="index.html">
+									<i class="menu-icon fa fa-user"></i>
+									<span class="menu-text"> Elettronica s.r.l </span>
+								</a>
+		
+								<b class="arrow"></b>
+							</li>
+						</ul>
 					</li>
 				</ul><!-- /.nav-list -->
 
@@ -380,7 +394,8 @@
 								<i class="ace-icon fa fa-home home-icon"></i>
 								<a href="#">Home</a>
 							</li>
-							<li class="active">Dashboard</li>
+							<li><i class="fa fa-users"></i> Lista Clienti/li>
+							<li class="active"><i class="fa fa-user"></i> Elettronica s.r.l.</li>
 						</ul><!-- /.breadcrumb -->
 
 						<!-- #section:basics/content.searchbox -->
@@ -398,280 +413,155 @@
 
 					<!-- /section:basics/content.breadcrumbs -->
 					<div class="page-content">
-						<div class="row">
-						
-						<div class="col-xs-12 body-main">
-							<h1>
-								Dashboard
-							</h1>
-							<br/><br/>
-							<div class="infobox-container">
-							
-								<div class="infobox infobox-green">
-									<div class="infobox-icon">
-										<i class="ace-icon fa fa-shopping-basket"></i>
-									</div>
-
-									<div class="infobox-data">
-										<span class="infobox-data-number">+90</span>
-										<div class="infobox-content">Ordini</div>
-									</div>
-									<div class="stat stat-success">8%</div>
-								</div>
-
-								<div class="infobox infobox-blue">
-									<div class="infobox-icon">
-										<i class="ace-icon fa fa-users"></i>
-									</div>
-										<div class="infobox-data">
-										<span class="infobox-data-number">+11</span>
-										<div class="infobox-content">nuovi clienti</div>
-									</div>
-									<div class="badge badge-success">
-										+32%
-										<i class="ace-icon fa fa-arrow-up"></i>
-									</div>
-								</div>
-
-								<div class="infobox infobox-orange2">
-									<div class="infobox-icon">
-										<i class="ace-icon fa fa-bullhorn"></i>
-									</div>
-									<div class="infobox-data">
-									<span class="infobox-data-number">12 Nuove</span>
-										<div class="infobox-content">promozioni attive</div>
-									</div>
-								</div>
-
-
-								<div class="infobox infobox-red">
-									<div class="infobox-icon">
-										<i class="ace-icon fa fa-gavel"></i>
-									</div>
-									<div class="infobox-data">
-										<span class="infobox-data-number">4 Ordini</span>
-										<div class="infobox-content">In approvazione</div>
-									</div>
-								</div>
-
-								<div class="infobox infobox-orange">
-									<div class="infobox-icon">
-										<i class="ace-icon fa fa-gear"></i>
-									</div>
-									<div class="infobox-data">
-									<span class="infobox-data-number">10 Ordini</span>
-										<div class="infobox-content">In elaborazione</div>
-									</div>
-								</div>
-
-								<div class="infobox infobox-orange2">
-									<div class="infobox-icon">
-										<i class="ace-icon fa fa-truck"></i>
-									</div>
-									<div class="infobox-data">
-									<span class="infobox-data-number">6 Ordini</span>
-										<div class="infobox-content">Spediti</div>
-									</div>
-								</div>
-
-								<div class="infobox infobox-green">
-									<div class="infobox-icon">
-										<i class="ace-icon fa fa-eur"></i>
-									</div>
-									<div class="infobox-data">
-									<span class="infobox-data-number">43 Ordini</span>
-										<div class="infobox-content">Fatturati</div>
-									</div>
-								</div>
-								<div class="infobox infobox-orange2">
-									<div class="infobox-icon">
-										<i class="ace-icon fa fa-pause"></i>
-									</div>
-									<div class="infobox-data">
-									<span class="infobox-data-number">3 Ordini</span>
-										<div class="infobox-content">Bloccati</div>
-									</div>
-								</div>
-								
-							</div>
-						</div><!-- /.page-header -->
-					</div>	
-							
-					<div>
-						<h2>Lista ultimi ordini</h2>
-						<div class="clearfix">
-							<div class="pull-right tableTools-container"><div class="dt-buttons btn-overlap btn-group"><a class="dt-button buttons-collection buttons-colvis btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table" data-original-title="" title=""><span><i class="fa fa-search bigger-110 blue"></i> <span class="hidden">Show/hide columns</span></span></a><a class="dt-button buttons-copy buttons-flash btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table"><span><i class="fa fa-copy bigger-110 pink"></i> <span class="hidden">Copy to clipboard</span></span><div style="position: absolute; left: 0px; top: 0px; width: 41px; height: 35px; z-index: 99;" data-original-title="" title=""><embed width="41" height="35" align="middle" wmode="transparent" flashvars="id=1&amp;width=41&amp;height=35" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" allowfullscreen="false" allowscriptaccess="always" name="ZeroClipboard_TableToolsMovie_1" bgcolor="#ffffff" quality="best" menu="false" loop="false" src="../assets/js/dataTables/extensions/buttons/swf/flashExport.swf" id="ZeroClipboard_TableToolsMovie_1"></div></a><a class="dt-button buttons-csv buttons-html5 btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table" data-original-title="" title=""><span><i class="fa fa-database bigger-110 orange"></i> <span class="hidden">Export to CSV</span></span></a><a class="dt-button buttons-excel buttons-flash btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table"><span><i class="fa fa-file-excel-o bigger-110 green"></i> <span class="hidden">Export to Excel</span></span><div style="position: absolute; left: 0px; top: 0px; width: 39px; height: 35px; z-index: 99;" data-original-title="" title=""><embed width="39" height="35" align="middle" wmode="transparent" flashvars="id=2&amp;width=39&amp;height=35" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" allowfullscreen="false" allowscriptaccess="always" name="ZeroClipboard_TableToolsMovie_2" bgcolor="#ffffff" quality="best" menu="false" loop="false" src="../assets/js/dataTables/extensions/buttons/swf/flashExport.swf" id="ZeroClipboard_TableToolsMovie_2"></div></a><a class="dt-button buttons-pdf buttons-flash btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table"><span><i class="fa fa-file-pdf-o bigger-110 red"></i> <span class="hidden">Export to PDF</span></span><div style="position: absolute; left: 0px; top: 0px; width: 39px; height: 35px; z-index: 99;" data-original-title="" title=""><embed width="39" height="35" align="middle" wmode="transparent" flashvars="id=3&amp;width=39&amp;height=35" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" allowfullscreen="false" allowscriptaccess="always" name="ZeroClipboard_TableToolsMovie_3" bgcolor="#ffffff" quality="best" menu="false" loop="false" src="../assets/js/dataTables/extensions/buttons/swf/flashExport.swf" id="ZeroClipboard_TableToolsMovie_3"></div></a><a class="dt-button buttons-print btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table" data-original-title="" title=""><span><i class="fa fa-print bigger-110 grey"></i> <span class="hidden">Print</span></span></a></div></div>
-						</div>
-						<div class="table-header">
-								Lista ultimi ordini
-						</div>
-						<div id="dynamic-table_wrapper" class="dataTables_wrapper form-inline no-footer">
-							<div class="row">
-								<div class="col-xs-6">
-									<div class="dataTables_length" id="dynamic-table_length">
-										<label>Mostra 
-											<select name="dynamic-table_length" aria-controls="dynamic-table" class="form-control input-sm">
-												<option value="10">10</option>
-													<option value="25">25</option>
-													<option value="50">50</option>
-													<option value="100">100</option>
-												</select> righe
-											</label>
+						<h1>
+							<i class="fa fa-eur"></i> Impostazione metodo di pagamento
+						</h1>
+						<div class="user-profile row" id="user-profile-1">
+							<div class="col-xs-12 col-sm-3 center">
+								<div>
+									<h2>
+										<i class="fa fa-user"></i> Elettronica s.r.l.
+									</h2>
+									<div class="space-4"></div>
+										<div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
+											<div class="inline position-relative">
+												<a data-toggle="dropdown" class="user-title-label dropdown-toggle" href="#">
+													<i class="ace-icon fa fa-circle light-green"></i>
+													&nbsp;
+													<span class="white">Mario Rossi</span>
+												</a>
+											</div>
 										</div>
 									</div>
-									<div class="col-xs-6"><div id="dynamic-table_filter" class="dataTables_filter">
-										<label>Cerca:
-											<input type="search" class="form-control input-sm" placeholder="" aria-controls="dynamic-table">
-										</label>
+									<div class="space-6"></div>
+									<div class="profile-contact-info">
+										<div class="profile-contact-links align-left">
+											<a class="btn btn-link" href="#">
+												<i class="ace-icon fa fa-phone bigger-120 green"></i>
+												054 8299302
+											</a>
+											<a class="btn btn-link" href="#">
+												<i class="ace-icon fa fa-envelope bigger-120 pink"></i>
+												Invia e-mail
+											</a>
+
+											<a class="btn btn-link" href="#">
+												<i class="ace-icon fa fa-globe bigger-125 blue"></i>
+												www.elettronica.it
+											</a>
+										</div>
+
+										<div class="space-6"></div>
+
+										<div class="profile-social-links align-center">
+											<a data-original-title="Visit my Facebook" title="" class="tooltip-info" href="#">
+												<i class="middle ace-icon fa fa-facebook-square fa-2x blue"></i>
+											</a>
+											<a data-original-title="Visit my Twitter" title="" class="tooltip-info" href="#">
+												<i class="middle ace-icon fa fa-twitter-square fa-2x light-blue"></i>
+											</a>
+											<a data-original-title="Visit my Pinterest" title="" class="tooltip-error" href="#">
+												<i class="middle ace-icon fa fa-pinterest-square fa-2x red"></i>
+											</a>
+										</div>
 									</div>
+
+									<div class="hr hr16 dotted"></div>
 								</div>
-							</div>
-							<table class="table table-striped table-bordered table-hover dataTable no-footer" id="dynamic-table" role="grid" aria-describedby="dynamic-table_info">
+
+								<div class="col-xs-12 col-sm-9">
+								<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="control-label col-xs-12 col-sm-3 no-padding-right"> Metodo di pagamento </label>
+										<div class="col-xs-12 col-sm-9">
+										<select multiple="" id="state" name="state" class="select2" data-placeholder="Seleziona il metodo di pagamento...">
+											<option value="">&nbsp;</option>
+											<option value="AL">Ricevuta bancaria</option>
+											<option value="AK">Rimessa diretta</option>
+											<option value="AZ">Contanti</option>
+										</select>	
+										<button class="btn btn-info btn-sm">Procedi</button>
+										</div>
+									</div>
+								</form>
+								<table class="table table-striped table-bordered table-hover dataTable no-footer" id="dynamic-table" role="grid" aria-describedby="dynamic-table_info">
 									<thead>
 										<tr role="row">
 											<th class="center sorting_disabled" rowspan="1" colspan="1" aria-label="">
-												N.ro ordine
+												Famiglia di prodotti
 											</th>
 											<th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="">
-												<i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
-												Data ordine
-											</th>
-											<th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending">
-												Importo
-											</th>
-											<th class="hidden-480 sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Clicks: activate to sort column ascending">
-												Stato
+												Metodi di pagamento
+												<i class="ace-icon fa fa-eur bigger-110 hidden-480"></i>
+												
 											</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr role="row" class="odd">
 											<td class="right">
-												#4832950
+												Accessori Alcatel
 											</td>
 											<td class="right">
-												12/02/2016
-											</td>
-											<td class="right">
-												450.00 &euro;
-											</td>
-											<td class="hidden-480">
-												<span class="label label-sm label-warning">
-													<i class="fa fa-truck"></i> In spedizione
-												</span>
+												Ricevuta bancaria, Rimessa diretta
 											</td>
 										</tr>
 										<tr role="row" class="odd">
 											<td class="right">
-												#1298509430
+												Accessori HTC
 											</td>
 											<td class="right">
-												22/02/2016
-											</td>
-											<td class="right">
-												100.00 &euro;
-											</td>
-											<td class="hidden-480">
-												<span class="label label-sm label-alert">
-													<i class="fa fa-gavel"></i> In approvazione
-												</span>
+												Ricevuta bancaria, Rimessa diretta
 											</td>
 										</tr>
 										<tr role="row" class="odd">
 											<td class="right">
-												#3925809348
+												Accessori SONY
 											</td>
 											<td class="right">
-												12/12/2015
-											</td>
-											<td class="right">
-												250.00 &euro;
-											</td>
-											<td class="hidden-480">
-												<span class="label label-sm label-info">
-													<i class="fa fa-check"></i> Evaso
-												</span>
+												Ricevuta bancaria, Rimessa diretta
 											</td>
 										</tr>
 										<tr role="row" class="odd">
 											<td class="right">
-												#4832950
+												Smartwatch
 											</td>
 											<td class="right">
-												12/02/2016
-											</td>
-											<td class="right">
-												450.00 &euro;
-											</td>
-											<td class="hidden-480">
-												<span class="label label-sm label-success">
-													<i class="fa fa-gear"></i> In gestione
-												</span>
+												Ricevuta bancaria, Rimessa diretta
 											</td>
 										</tr>
 										<tr role="row" class="odd">
 											<td class="right">
-												#3241234
+												Table Alcatel
 											</td>
 											<td class="right">
-												10/01/2016
-											</td>
-											<td class="right">
-												1.450.00 &euro;
-											</td>
-											<td class="hidden-480">
-												<span class="label label-sm label-success">
-													<i class="fa fa-gear"></i> In gestione
-												</span>
+												Ricevuta bancaria
 											</td>
 										</tr>
 										<tr role="row" class="odd">
 											<td class="right">
-												#123423
+												Table HTC
 											</td>
 											<td class="right">
-												27/12/2016
-											</td>
-											<td class="right">
-												230.00 &euro;
-											</td>
-											<td class="hidden-480">
-												<span class="label label-sm label-success">
-													<i class="fa fa-gear"></i> In gestione
-												</span>
+												Ricevuta bancaria
 											</td>
 										</tr>
+										<tr role="row" class="odd">
+											<td class="right">
+												Telefoni HTC
+											</td>
+											<td class="right">
+												Ricevuta bancaria, Rimessa diretta
+											</td>
+										</tr>
+										
 									</tbody>
 								</table>
-								<div class="row">
-									<div class="col-xs-6">
-										<div class="dataTables_info" id="dynamic-table_info" role="status" aria-live="polite">
-											Showing 1 to 10 of 23 entries
-										</div>
-									</div>
-									<div class="col-xs-6">
-										<div class="dataTables_paginate paging_simple_numbers" id="dynamic-table_paginate">
-											<ul class="pagination">
-												<li class="paginate_button previous disabled" aria-controls="dynamic-table" tabindex="0" id="dynamic-table_previous">
-													<a href="#">Previous</a>
-												</li>
-												<li class="paginate_button active" aria-controls="dynamic-table" tabindex="0">
-													<a href="#">1</a>
-												</li>
-												<li class="paginate_button " aria-controls="dynamic-table" tabindex="0">
-													<a href="#">2</a>
-												</li>
-												<li class="paginate_button " aria-controls="dynamic-table" tabindex="0">
-													<a href="#">3</a>
-												</li>
-												<li class="paginate_button next" aria-controls="dynamic-table" tabindex="0" id="dynamic-table_next">
-													<a href="#">Next</a>
-												</li>
-											</ul>
-										</div>
-									</div>
 								</div>
-							</div>
+							</div>	
+						<div class="space-6">
+						</div><div class="space-6">
+						</div><div class="space-6">
 						</div>
 					</div><!-- /.row -->
 				</div><!-- /.page-content -->
@@ -741,7 +631,7 @@ P. iva: 01626981201 - Telephone: ++39 051 8900211 r.a. - Fax: ++39 051 864677
 		<script src="assets/js/flot/jquery.flot.js"></script>
 		<script src="assets/js/flot/jquery.flot.pie.js"></script>
 		<script src="assets/js/flot/jquery.flot.resize.js"></script>
-
+		<script src="assets/js/select2.js"></script>
 		<!-- ace scripts -->
 		<script src="assets/js/ace/elements.scroller.js"></script>
 		<script src="assets/js/ace/elements.colorpicker.js"></script>
@@ -766,6 +656,9 @@ P. iva: 01626981201 - Telephone: ++39 051 8900211 r.a. - Fax: ++39 051 864677
 		<script src="assets/js/ace/ace.searchbox-autocomplete.js"></script>
 
 		<!-- inline scripts related to this page -->
+		<script>
+		$('.select2').css('width','200px').select2({allowClear:true});
+		</script>
 		
 
 		<!-- the following scripts are used in demo only for onpage help and you don't need them -->

@@ -1125,18 +1125,18 @@ pre.prettyprint {
   -webkit-box-shadow: none;
   box-shadow: none;
   min-height: 45px;
-  background: #438eb9;
+  background: #fff;
 }
 .navbar .navbar-text,
 .navbar .navbar-link {
   color: #ffffff;
 }
 .navbar .navbar-brand {
-  color: #ffffff;
+  color: #26afda;
   font-size: 24px;
   text-shadow: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   height: auto;
 }
 .navbar .navbar-brand:hover,
@@ -1913,6 +1913,18 @@ pre.prettyprint {
   padding-right: 12px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	/*
+	.navbar-brand img {
+    left: 52px !important;
+	height: 57px !important;
+}
+
+.navbar .navbar-brand {
+    margin-left: 120px !important;
+}
+	*/
+	
   .navbar.navbar-collapse {
     background-color: transparent;
   }
@@ -1932,6 +1944,8 @@ pre.prettyprint {
     background-color: #438eb9;
   }
 }
+
+
 .navbar .navbar-toggle {
   border: 1px solid transparent;
   width: 40px;
@@ -5497,15 +5511,15 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary,
 .btn-primary:focus {
-  background-color: #428bca !important;
-  border-color: #428bca;
+  background-color: #26afda !important;
+  border-color: #26afda;
 }
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus:active,
 .btn-primary:focus:hover,
 .open > .btn-primary.dropdown-toggle {
-  background-color: #1b6aaa !important;
+  background-color: #26afda !important;
   border-color: #428bca;
 }
 .btn-primary.no-border:hover,
@@ -5544,15 +5558,15 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-info,
 .btn-info:focus {
-  background-color: #6fb3e0 !important;
-  border-color: #6fb3e0;
+  background-color: #26afda !important;
+  border-color: #26afda;
 }
 .btn-info:hover,
 .btn-info:active,
 .btn-info:focus:active,
 .btn-info:focus:hover,
 .open > .btn-info.dropdown-toggle {
-  background-color: #4f99c6 !important;
+  background-color: #26afda !important;
   border-color: #6fb3e0;
 }
 .btn-info.no-border:hover,
@@ -20118,3 +20132,49 @@ input.typeahead.scrollable ~ .tt-menu {
     display: none !important;
   }
 }
+
+
+.navbar-brand img {
+    display: inline;
+    height: 79px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index:100000;
+}
+
+.navbar .navbar-brand {
+    color: #526364 !important;
+    font-size: 29px !important;
+    margin-left: 151px;
+    margin-top: 10px;
+}
+
+.breadcrumbs {
+    background-color: #EFF3F8;
+}
+
+.user-links a{
+	font-size:20px;
+}
+
+.user-links {
+    padding: 10px !important;
+    font-family: "Open Sans";
+}
+
+
+.body-main {
+}
+
+
+.sidebar {
+    background: #fff none repeat scroll 0 0 !important;
+    margin-top: 35px;
+ }
+ 
+ .navbar{
+ border-bottom: 1px solid #e5e5e5 !important;
+ }
+ 
+ 
