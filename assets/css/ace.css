@@ -19290,6 +19290,8 @@ input.typeahead.scrollable ~ .tt-menu {
 }
 .no-skin .navbar .navbar-toggle {
   background-color: #75B3D7;
+  z-index: 999999;
+  top: 95px;
 }
 .no-skin .navbar .navbar-toggle:focus {
   background-color: #75B3D7;
